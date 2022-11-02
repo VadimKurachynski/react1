@@ -7,7 +7,7 @@ console.log("pagestr   ----   ",props);
         <div className={s.content}>
             <div>верх</div>
             <div><button>1</button><button>2</button></div>
-            <div>{props.like}</div>
+            <div>{props.likes}</div>
             <div>низ</div>
         </div>
     )
@@ -15,10 +15,11 @@ console.log("pagestr   ----   ",props);
 
 
 function mapStateToProps(state){
-
+console.log("mapStateToProps-----   ",state )
     return {
-        like:state.likes
+        likes:state.likes
     }
 }
 
+export default connect(mapStateToProps)(state);
 export default PageStr;
