@@ -2,10 +2,11 @@
 import './App.css';
 import Page from "./Page/Page";
 
+
 function App() {
   return (
     <div className="App">
-     < Page />
+     < Page  like="4"/>
     </div>
   );
 }
