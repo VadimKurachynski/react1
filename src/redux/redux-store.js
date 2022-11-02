@@ -9,7 +9,7 @@ const reducer=(state=initialState, action)=>{
     switch (action.type) {
         case one:
             return{
-                ...state.likes+=1
+                ...state.likes+=5
             };
         default:
             return state;
