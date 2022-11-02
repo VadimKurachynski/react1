@@ -5,7 +5,7 @@ const initialState={
     likes:10
 }
 const reducer=(state=initialState, action)=>{
-    console.log("reducer");
+    console.log("reducer",state);
     switch (action.type) {
         case one:
             return{
@@ -18,3 +18,4 @@ const reducer=(state=initialState, action)=>{
 let store=legacy_createStore(reducer);// создали стор
 export default store;
 window.store=store;
+
