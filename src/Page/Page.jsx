@@ -7,7 +7,7 @@ const PageStr = (props) => {
         <div className={s.content}>
             <div>верх</div>
             <div>
-                <button onClick={onAdd}>1</button>
+                <button onClick={props.hhh}>1</button>
                 <button>2</button>
             </div>
             <div>{props.state.likes}</div>
@@ -17,7 +17,7 @@ const PageStr = (props) => {
 }
 
 let onAdd = () => {
-    dispatch({type: 'one'})
+
 }
 
 
@@ -28,8 +28,13 @@ let mapStateToProps = (state) => {
 }
 
 let mapDispatchToProps = (dispatch) => {
+
     return{
-        increment: () => dispatch({ type: 'one' })
+            hhh:()=>{
+    console.log("click");
+const action ={type:"one"};
+dispatch(action);
+}
     }
 
 
