@@ -10,16 +10,11 @@ console.log("pagestr   ----   ",props);
             <div>{props.likes}</div>
             <div>низ</div>
         </div>
-    )
+    );
 }
 
 
-function mapStateToProps(state){
-console.log("mapStateToProps-----   ",state )
-    return {
-        likes:state.likes
-    }
-}
 
-export default connect(mapStateToProps)(state);
+
 export default PageStr;
+
