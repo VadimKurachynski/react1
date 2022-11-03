@@ -2,14 +2,18 @@ import {legacy_createStore} from "redux";
 
 const one = 'one';
 const initialState={
-    likes:10
+    likes:10,
+    disliks:100,
 }
 const reducer=(state=initialState, action)=>{
     console.log("reducer",action);
     switch (action.type) {
         case one:
             return{
-                ...state.likes+=1
+                ...state,
+                likes:state.likes+1,
+                disliks:state.disliks-1
+
             };
         default:
             return state;

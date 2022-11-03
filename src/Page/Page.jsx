@@ -11,6 +11,7 @@ const PageStr = (props) => {
                 <button>2</button>
             </div>
             <div>{props.state.likes}</div>
+            <div>{props.state.disliks}</div>
             <div>низ</div>
         </div>
     );
