@@ -29,7 +29,7 @@ let mapDispatchToProps = (dispatch) => {
 
     return{
         cliclike:()=>{
-    console.log("click");
+    console.log("mapDispatchToProps-----","click");
 const action ={type:"one"};
 dispatch(action);
 }
