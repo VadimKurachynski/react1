@@ -7,7 +7,7 @@ const PageStr = (props) => {
         <div className={s.content}>
             <div>верх</div>
             <div>
-                <button onClick={props.hhh}>1</button>
+                <button onClick={props.cliclike}>1</button>
                 <button>2</button>
             </div>
             <div>{props.state.likes}</div>
@@ -16,9 +16,7 @@ const PageStr = (props) => {
     );
 }
 
-let onAdd = () => {
 
-}
 
 
 let mapStateToProps = (state) => {
@@ -30,7 +28,7 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
 
     return{
-            hhh:()=>{
+        cliclike:()=>{
     console.log("click");
 const action ={type:"one"};
 dispatch(action);
