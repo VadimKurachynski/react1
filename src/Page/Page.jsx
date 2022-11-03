@@ -37,7 +37,7 @@ const action ={type:"one"};
 dispatch(action);
 },
         clicdis:()=>{
-            console.log("mapDispatchToProps-----","click");
+            console.log("mapDispatchToProps-----","clicdis");
             const action ={type:"two"};
             dispatch(action);
         },
