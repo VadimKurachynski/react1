@@ -5,7 +5,7 @@ const initialState={
     likes:10
 }
 const reducer=(state=initialState, action)=>{
-    console.log("reducer",state);
+    console.log("reducer",action);
     switch (action.type) {
         case one:
             return{
