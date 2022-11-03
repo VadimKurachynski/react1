@@ -18,4 +18,3 @@ const reducer=(state=initialState, action)=>{
 let store=legacy_createStore(reducer);// создали стор
 export default store;
 window.store=store;
-
