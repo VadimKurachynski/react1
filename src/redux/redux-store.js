@@ -14,13 +14,12 @@ const reducer=(state=initialState, action)=>{
         case one:
             return{
                 ...state,
-                likes:state.likes+1,
-
+                likes: state.likes+1,
             };
         case two:
             return{
                 ...state,
-                disliks:state.disliks-1,
+                disliks: state.disliks-1,
             };
         default:
             return state;

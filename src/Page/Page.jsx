@@ -25,11 +25,10 @@ let mapStateToProps = (state) => {
 
     }
 }
-
 let mapDispatchToProps = (dispatch) => {
     console.log("mapDispatchToProps");
     return{
-        cliclike:()=>{
+       cliclike:()=>{
     console.log("mapDispatchToProps-----","click");
 const action ={type:"one"};
 dispatch(action);
