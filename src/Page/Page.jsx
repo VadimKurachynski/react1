@@ -10,8 +10,8 @@ const PageStr = (props) => {
                 <button onClick={props.cliclike}>1</button>
                 <button onClick={props.clicdis}>2</button>
             </div>
-            <div>{props.state.likes}</div>
-            <div>{props.state.disliks}</div>
+            <div>{props.likes}</div>
+            <div>{props.disliks}</div>
             <div>низ</div>
         </div>
     );
@@ -19,12 +19,13 @@ const PageStr = (props) => {
 
 
 
-
 let mapStateToProps = (state) => {
     console.log("mapStateProps");
     return {
+        likes: state.likes,
+        disliks:state.disliks
 
-        state
+
     }
 }
 
