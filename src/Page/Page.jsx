@@ -45,7 +45,6 @@ dispatch(action);
 
 }
 
-
 const DialogsContainer = connect(mapStateToProps, mapDispatchToProps)(PageStr);
 export default DialogsContainer
 
