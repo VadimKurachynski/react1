@@ -25,7 +25,6 @@ const reducer=(state=initialState, action)=>{
         default:
             return state;
     }
-
 }
 let store=legacy_createStore(reducer);// создали стор
 export default store;
