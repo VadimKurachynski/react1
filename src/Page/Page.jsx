@@ -17,14 +17,11 @@ const PageStr = (props) => {
     );
 }
 
-
-
 let mapStateToProps = (state) => {
     console.log("mapStateProps");
     return {
         likes: state.likes,
         disliks:state.disliks
-
 
     }
 }
