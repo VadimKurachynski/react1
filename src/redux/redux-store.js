@@ -3,6 +3,8 @@ import {legacy_createStore} from "redux";
 const one = 'one';
 const two = 'two';
 const change = 'change';
+const clicpost = 'clicpost';
+
 const initialState = {
     posts: [
         {id: 1, message: "privet"},
@@ -25,7 +27,6 @@ const reducer = (state = initialState, action) => {
             };
         case two:
             return {
-                ...state,
                 disliks: state.disliks - 1,
             };
 
@@ -33,6 +34,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 chantext: action.chantext,
+            };
+        case clicpost:
+            return {
+                ...state,
+                posts: [...state.posts,{id:6,message: state.chantext}]
             };
 
         default:
