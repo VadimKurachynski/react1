@@ -12,7 +12,7 @@ const PageStr = (props) => {
             </div>
             <div>{props.likes}</div>
             <div>{props.disliks}</div>
-            <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
+            <div><textarea onChange={props.change} value={props.chanText}></textarea></div>
             <div>низ</div>
         </div>
     );
@@ -22,8 +22,8 @@ let mapStateToProps = (state) => {
     console.log("mapStateProps");
     return {
         likes: state.likes,
-        disliks:state.disliks
-
+        disliks:state.disliks,
+        chantext:state.chantext,
     }
 }
 let mapDispatchToProps = (dispatch) => {
@@ -39,9 +39,10 @@ dispatch(action);
             const action ={type:"two"};
             dispatch(action);
         },
-        change:()=>{
+        change:(e)=>{
             console.log("mapDispatchToProps-----","clicdis");
-            const action ={type:"two"};
+            let text=e.target.value;
+            const action ={type:"change",onchtext:text};
             dispatch(action);
         },
 

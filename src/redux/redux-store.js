@@ -2,13 +2,14 @@ import {legacy_createStore} from "redux";
 
 const one = 'one';
 const two = 'two';
-
+const change = 'change';
 const initialState={
     likes:10,
     disliks:100,
     chantext:"текст",
 }
 const reducer=(state=initialState, action)=>{
+
     console.log("reducer",action);
 
     switch (action.type) {
@@ -22,6 +23,13 @@ const reducer=(state=initialState, action)=>{
                 ...state,
                 disliks: state.disliks-1,
             };
+
+        case change:
+            return{
+                ...state,
+                chantext: onchtext,
+            };
+
         default:
             return state;
     }
