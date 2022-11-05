@@ -6,6 +6,7 @@ const two = 'two';
 const initialState={
     likes:10,
     disliks:100,
+    chantext:"текст",
 }
 const reducer=(state=initialState, action)=>{
     console.log("reducer",action);

@@ -12,6 +12,7 @@ const PageStr = (props) => {
             </div>
             <div>{props.likes}</div>
             <div>{props.disliks}</div>
+            <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
             <div>низ</div>
         </div>
     );
@@ -38,7 +39,11 @@ dispatch(action);
             const action ={type:"two"};
             dispatch(action);
         },
-
+        change:()=>{
+            console.log("mapDispatchToProps-----","clicdis");
+            const action ={type:"two"};
+            dispatch(action);
+        },
 
     }
 
