@@ -13,7 +13,7 @@ const initialState = {
 ],
     likes:10,
     disliks: 100,
-    chantext: "текст",
+    chantext: "текст_начальный",
 }
 const reducer = (state = initialState, action) => {
 
@@ -27,6 +27,7 @@ const reducer = (state = initialState, action) => {
             };
         case two:
             return {
+                ...state,
                 disliks: state.disliks - 1,
             };
 
@@ -38,8 +39,9 @@ const reducer = (state = initialState, action) => {
         case clicpost:
             return {
                 ...state,
-                posts: [...state.posts,{id:6,message: state.chantext}]
-            };
+               posts: [...state.posts,{id:7, message:state.chantext}]
+
+            }
 
         default:
             return state;

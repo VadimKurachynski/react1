@@ -4,9 +4,9 @@ import {connect} from "react-redux";
 
 
 const PageStr = (props) => {
-// debugger;
-    // let i=<div>{props.posts[1].message}</div>;
-    let i=props.posts.map(p=><div>{p.message}</div>)
+ // debugger;
+
+    let i=props.posts.map(p=><div key={p.id}>{p.message}</div>)
 
     console.log("pagestr   ----   ", props);
     return (
@@ -45,7 +45,7 @@ let mapDispatchToProps = (dispatch) => {
     console.log("mapDispatchToProps");
     return{
        cliclike:()=>{
-    console.log("mapDispatchToProps-----","click");
+    console.log("mapDispatchToProps-----","cliclike");
 const action ={type:"one"};
 dispatch(action);
 },
@@ -55,13 +55,13 @@ dispatch(action);
             dispatch(action);
         },
         change:(e)=>{
-            console.log("mapDispatchToProps-----","clicdis");
+            console.log("mapDispatchToProps-----","change");
             let text=e.target.value;
-            const action ={type:"change",onchtext:text};
+            const action ={type:"change",chantext:text};
             dispatch(action);
         },
         clicpost:()=>{
-            console.log("mapDispatchToProps-----","clicdis");
+            console.log("mapDispatchToProps-----","clicpost");
 
             const action ={type:"clicpost"};
             dispatch(action);
