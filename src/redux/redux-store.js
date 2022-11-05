@@ -27,7 +27,7 @@ const reducer=(state=initialState, action)=>{
         case change:
             return{
                 ...state,
-                chantext: onchtext,
+                chantext: action.chantext,
             };
 
         default:
