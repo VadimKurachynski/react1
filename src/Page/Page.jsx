@@ -4,7 +4,9 @@ import {connect} from "react-redux";
 
 
 const PageStr = (props) => {
-    let i=<div>{props.likes}{props.disliks}</div>;
+
+    let i=<div>{props.posts[1].message}</div>;
+
     console.log("pagestr   ----   ", props);
     return (
         <div className={s.content}>
