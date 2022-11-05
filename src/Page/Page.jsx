@@ -4,8 +4,9 @@ import {connect} from "react-redux";
 
 
 const PageStr = (props) => {
-
-    let i=<div>{props.posts[1].message}</div>;
+// debugger;
+    // let i=<div>{props.posts[1].message}</div>;
+    let i=props.posts.map(p=><div>{p.message}</div>)
 
     console.log("pagestr   ----   ", props);
     return (
@@ -18,10 +19,12 @@ const PageStr = (props) => {
             <div>{props.likes}</div>
             <div>{props.disliks}</div>
             <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
+            <button onClick={props.clicpost}>добавить</button>
             <div>низ</div>
 
 
             <div>{i}</div>
+
         </div>
     );
 }
@@ -57,7 +60,12 @@ dispatch(action);
             const action ={type:"change",onchtext:text};
             dispatch(action);
         },
+        clicpost:()=>{
+            console.log("mapDispatchToProps-----","clicdis");
 
+            const action ={type:"clicpost"};
+            dispatch(action);
+        },
     }
 
 }

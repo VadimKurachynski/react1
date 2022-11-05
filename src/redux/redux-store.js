@@ -33,7 +33,6 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 chantext: action.chantext,
-
             };
 
         default:
