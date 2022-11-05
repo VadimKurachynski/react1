@@ -19,9 +19,8 @@ const PageStr = (props) => {
             <div>{props.likes}</div>
             <div>{props.disliks}</div>
             <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
-            <button onClick={props.clicpost}>добавить</button>
+            <button  onClick={props.clicpost}>добавить</button>
             <div>низ</div>
-
 
             <div>{i}</div>
 
