@@ -1,10 +1,11 @@
 import s from "./Page.module.css"
 import {connect} from "react-redux";
-
+import { useSelector } from 'react-redux'
 
 
 const PageStr = (props) => {
  // debugger;
+const counter=useSelector((state)=>state.likes)
 
     let i=props.posts.map(p=><div key={p.id}>{p.message}</div>)
 
