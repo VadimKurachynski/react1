@@ -3,29 +3,34 @@ import {legacy_createStore} from "redux";
 const one = 'one';
 const two = 'two';
 const change = 'change';
-const initialState={
+const initialState = {
+    posts: [
+        {id: 1, message: "privet"},
+        {id: 2, message: "privet"},
+        {id: 3, message: "privet"}
+],
     likes:10,
-    disliks:100,
-    chantext:"текст",
+    disliks: 100,
+    chantext: "текст",
 }
-const reducer=(state=initialState, action)=>{
+const reducer = (state = initialState, action) => {
 
-    console.log("reducer",action);
+    console.log("reducer", action);
 
     switch (action.type) {
         case one:
-            return{
+            return {
                 ...state,
-                likes: state.likes+1,
+                likes: state.likes + 1,
             };
         case two:
-            return{
+            return {
                 ...state,
-                disliks: state.disliks-1,
+                disliks: state.disliks - 1,
             };
 
         case change:
-            return{
+            return {
                 ...state,
                 chantext: action.chantext,
 
@@ -35,6 +40,6 @@ const reducer=(state=initialState, action)=>{
             return state;
     }
 }
-let store=legacy_createStore(reducer);// создали стор
+let store = legacy_createStore(reducer);// создали стор
 export default store;
-window.store=store;
+window.store = store;

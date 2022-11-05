@@ -1,7 +1,10 @@
 import s from "./Page.module.css"
 import {connect} from "react-redux";
 
+
+
 const PageStr = (props) => {
+    let i=<div>{props.likes}{props.disliks}</div>;
     console.log("pagestr   ----   ", props);
     return (
         <div className={s.content}>
@@ -14,9 +17,15 @@ const PageStr = (props) => {
             <div>{props.disliks}</div>
             <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
             <div>низ</div>
+
+
+            <div>{i}</div>
         </div>
     );
 }
+
+
+
 
 let mapStateToProps = (state) => {
     console.log("mapStateProps");
