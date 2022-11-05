@@ -12,7 +12,7 @@ const PageStr = (props) => {
             </div>
             <div>{props.likes}</div>
             <div>{props.disliks}</div>
-            <div><textarea onChange={props.change} value={props.chanText}></textarea></div>
+            <div><textarea onChange={props.change} value={props.chantext}></textarea></div>
             <div>низ</div>
         </div>
     );
