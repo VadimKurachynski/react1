@@ -6,8 +6,8 @@ const change = 'change';
 const initialState = {
     posts: [
         {id: 1, message: "privet"},
-        {id: 2, message: "privet"},
-        {id: 3, message: "privet"}
+        {id: 2, message: "buy"},
+        {id: 3, message: "hello"}
 ],
     likes:10,
     disliks: 100,

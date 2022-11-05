@@ -33,6 +33,7 @@ let mapStateToProps = (state) => {
         likes: state.likes,
         disliks:state.disliks,
         chantext:state.chantext,
+        posts:state.posts,
     }
 }
 let mapDispatchToProps = (dispatch) => {
